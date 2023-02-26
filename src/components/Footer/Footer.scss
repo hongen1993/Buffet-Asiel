@@ -1,0 +1,42 @@
+@import "../../App.scss";
+
+.footer {
+    background-color: rgb(25, 25, 25);
+    height: 17.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .3s;
+    transform: translateY(10rem);
+    font-size: .75rem;
+
+    &__background {
+        width: 100%;
+        height: 17.5vh;
+        background-color: rgb(34, 34, 34);
+        position: absolute;
+    }
+
+    &__logo {
+        position: absolute;
+        font-family: 'Babylonica', cursive;
+        color: rgb(155, 155, 155);
+        font-size: 2.5rem;
+    }
+
+    &__text,
+    &__text-b {
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(155, 155, 155);
+
+        a {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(155, 155, 155);
+        }
+    }
+}
+
+.moveUp {
+    transform: translateY(0rem);
+}

@@ -1,0 +1,45 @@
+// COLOR VARIABLES
+$color-black: black;
+$color-primary: #2a2a2a;
+$color-secondary: #f3f3f3;
+$color-grey-light: #aaa;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+$bp-smallest: 25em; // 360px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'GTEAPAC', sans-serif;
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 90%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 80%;
+  }
+}
+
+// .container {
+//   scroll-snap-type: y mandatory;
+//   overflow-y: scroll;
+//   height: 100vh;
+// }
+
+// .section {
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// scroll-snap-align: start;
+// }

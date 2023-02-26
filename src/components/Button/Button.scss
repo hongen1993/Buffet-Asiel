@@ -1,0 +1,29 @@
+@import "../../App.scss";
+
+.button {
+    background-color: rgb(20, 20, 20);
+    padding: .75rem 1rem;
+    margin: 1.5rem 0 1rem 0;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+    letter-spacing: .3rem;
+    width: 40%;
+
+    @media only screen and (max-width: $bp-largest) {
+        width: 45%;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-secondary;
+        font-family: 'GTEAPAC', sans-serif;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+}
