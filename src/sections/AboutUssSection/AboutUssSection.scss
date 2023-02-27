@@ -1,0 +1,151 @@
+@import "../../App.scss";
+
+.about-uss-section {
+    height: 165vh;
+    background-image: linear-gradient(180deg, rgba($color-secondary, .9)0%,
+            rgba($color-secondary, 1)0%,
+            rgba($color-secondary, .4)15%,
+            transparent 30%, transparent 70%,
+            rgba($color-secondary, .4)85%,
+            rgba($color-secondary, 1)100%,
+        ), url("../../assets/images/white-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-rows: 85vh 55vh;
+    padding: 10rem 2.5rem 0 2.5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        height: 145vh;
+        grid-template-rows: 65vh 55vh;
+    }
+
+    &-a,
+    &-b {
+        grid-row: 1 / 2;
+    }
+
+    &-c,
+    &-d {
+        grid-row: 2 / 3;
+    }
+
+    &-a,
+    &-c {
+        grid-column: 1 / 2;
+    }
+
+    &-b,
+    &-d {
+        grid-column: 2 / 3;
+    }
+
+    &-a {
+        width: 85%;
+        padding: 4rem 3rem;
+        transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform: translateX(-55rem);
+
+        h2 {
+            width: 80%;
+        }
+    }
+
+    &-b {
+        padding: 1rem 1.5rem;
+        transition: all 1s ease-in-out;
+        transform: translateX(55rem);
+
+        img {
+            border-radius: 5px;
+            z-index: 10;
+            width: 100%;
+            margin-left: -7.5rem;
+        }
+    }
+
+    &-c {
+        padding: 0 1.5rem;
+        transition: all 1s ease-in-out;
+        transform: translateX(-55rem);
+
+        img {
+            border-radius: 5px;
+            z-index: 5;
+            width: 105%;
+            margin-top: -5rem;
+        }
+    }
+
+    &-d {
+        width: 85%;
+        text-align: end;
+        padding: .5rem 4rem;
+        transform: translateX(55rem);
+        transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    h3,
+    h2 {
+        color: $color-primary;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            font-size: 1.5rem;
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            font-size: 2.75rem;
+        }
+    }
+
+    &__text,
+    &__text-b {
+        line-height: 1.2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        color: rgb(37, 37, 37);
+    }
+
+    &__text-b {
+        margin-top: 1rem;
+    }
+
+    img {
+        box-shadow: 0 1rem 3rem black;
+    }
+
+    .divider {
+        background-color: $color-primary;
+        height: 1.5px;
+        margin: 1rem 0;
+        color: transparent;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+
+    button {
+        margin: 1.25rem 0;
+        width: 50%;
+
+        a {
+            font-size: .8rem;
+        }
+
+    }
+}
+
+.moveIn {
+    transform: translateX(0rem) !important;
+}

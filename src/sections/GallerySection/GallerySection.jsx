@@ -68,7 +68,7 @@ const GallerySection = () => {
                 <div className="divider">.</div>
                 <p className="gallery-section__text">En Buffet Asiel estamos en constante progreso para alcanzar y superar las expectativas de nuestros clientes.</p>
             </div>
-            <div className={`slide-container ${moveIn ? 'moveInRight' : ''}`}>
+            <div className={`slide-container ${moveIn ? 'moveIn' : ''}`}>
                 <Slide>
                     {slideImages.map((slideImage, index) => (
                         <div key={index}>
