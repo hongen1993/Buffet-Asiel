@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
 .gallery-section {
-    height: 110vh;
+    height: 45rem;
     background-image: linear-gradient(180deg, rgba($color-secondary, .9)0%,
             rgba($color-secondary, .9)2.5%,
             rgba($color-secondary, .2)20%,
@@ -19,6 +19,21 @@
         height: 105vh;
     }
 
+    @media only screen and (max-width: $bp-small) {
+        grid-row: 3 / 4;
+        padding-top: 5rem;
+        display: grid;
+        grid-template-rows: 60vh 95vh;
+        height: 165vh;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 0 1rem;
+        padding-top: 10rem;
+        grid-template-rows: 55vh 75vh;
+        height: 150vh;
+    }
+
     &__content {
         background-image: linear-gradient(180deg, rgba($color-black, .4)0%,
                 rgba($color-black, .4)100%), url("../../assets/images/gallery-bckgrndb.jpg");
@@ -32,11 +47,27 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 1 / 2;
+            align-items: center;
+            padding-left: 0;
+            height: 100%;
+            margin-top: 0rem;
+        }
     }
 
     h3 {
         font-size: 2rem;
         color: $color-secondary;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-left: -12.5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-left: -15rem;
+        }
     }
 
     h2 {
@@ -45,6 +76,16 @@
         color: $color-secondary;
         margin-left: 2.5rem;
         font-weight: lighter;
+
+        @media only screen and (max-width: $bp-small) {
+            width: unset;
+            margin-left: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: unset;
+            margin-left: 2.5rem;
+        }
     }
 
     .divider {
@@ -53,6 +94,14 @@
         margin: 1rem 0;
         color: transparent;
         width: 35%;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 50%;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 70%;
+        }
     }
 
     &__text {
@@ -63,6 +112,15 @@
         color: $color-secondary;
         width: 29%;
         font-size: .85rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 45%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1rem;
+            width: 70%;
+        }
     }
 }
 
@@ -80,6 +138,16 @@
     @media only screen and (max-width: $bp-largest) {
         margin-top: 5rem;
     }
+
+    @media only screen and (max-width: $bp-small) {
+        right: 0rem;
+        grid-row: 2 / 3;
+        position: relative;
+        border: none;
+        border-radius: 0;
+        padding: 2rem;
+        box-shadow: none;
+    }
 }
 
 .react-slideshow-container {
@@ -89,10 +157,19 @@
         width: 47.5vw;
     }
 
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+    }
+
     .nav:first-child,
     .nav:last-child {
         width: 2.5rem;
         height: 2.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
 
         svg {
             width: 1.75rem;
@@ -103,9 +180,14 @@
 
     .nav:first-child {
         left: 1rem !important;
+
+        @media only screen and (max-width: $bp-small) {
+            left: .5rem !important;
+        }
     }
 
     .nav:last-child {
-        right: 1rem !important;
+        right: .5rem !important;
+
     }
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+@import "../../App.scss";
 
 .navbar {
     position: fixed;
@@ -12,16 +13,30 @@
     transition: all 1s;
     transform: translateY(0);
 
+    @media only screen and (max-width: $bp-small) {
+        margin: 0;
+        width: 100vw;
+        border-radius: 0px;
+    }
+
     &:after {
         content: '';
-        height: 10px;
-        width: calc(100% - 30px);
+        height: .7rem;
+        width: calc(100% - 1.9rem);
         position: absolute;
         bottom: -10px;
         border-radius: 0 0 5px 5px;
         background-color: #f2f6f7;
         opacity: 0.15;
         left: 15px;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 0;
+            width: 100vw;
+            border-radius: 0px;
+            width: 100%;
+            left: 0px;
+        }
     }
 
     &__logo {
@@ -35,7 +50,7 @@
     }
 
     &__heading {
-        height: 15vh;
+        height: 7rem;
         color: rgb(230, 235, 230);
         font-family: 'Babylonica', cursive;
         width: 100%;

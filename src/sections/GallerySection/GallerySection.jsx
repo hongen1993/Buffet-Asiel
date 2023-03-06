@@ -30,6 +30,15 @@ const divStyle = {
     backgroundPosition: 'center',
 }
 
+const divStyleMobile = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundSize: 'cover',
+    height: '62.5vh',
+    backgroundPosition: 'center',
+}
+
 const slideImages = [
     { url: imageA },
     { url: imageB },
@@ -53,26 +62,56 @@ const slideImages = [
 
 const GallerySection = () => {
     const [moveIn, setMoveIn] = useState(false)
+    const [mobile, setMobile] = useState(false)
+
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 1500) {
-                setMoveIn(true)
-            }
-        })
+        const height = window.innerHeight;
+        if (height >= 650 && height < 750) {
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 1500) {
+                    setMoveIn(true)
+                }
+            })
+        }
+        else {
+            setMoveIn(true)
+        }
+        const width = window.innerWidth;
+        if (width <= 400) {
+            setMobile(true)
+        }
     }, [])
     return (
         <section className="gallery-section">
             <div className="gallery-section__content">
-                <h3>Nuestra</h3>
-                <h2>Galería</h2>
+                {mobile ?
+                    <>
+                        <h3>Sobre</h3>
+                        <h2>Nosotros</h2>
+                    </>
+                    :
+                    <>
+                        <h3>Nuestra</h3>
+                        <h2>Galería</h2>
+                    </>
+                }
                 <div className="divider">.</div>
                 <p className="gallery-section__text">En Buffet Asiel estamos en constante progreso para alcanzar y superar las expectativas de nuestros clientes.</p>
             </div>
             <div className={`slide-container ${moveIn ? 'moveIn' : ''}`}>
+                {mobile ?
+                    <>
+                        <h3>Nuestra</h3>
+                        <h2>Galería</h2>
+                    </>
+                    :
+                    <>
+                    </>
+                }
                 <Slide>
                     {slideImages.map((slideImage, index) => (
                         <div key={index}>
-                            <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}></div>
+                            <div style={mobile ? { ...divStyleMobile, 'backgroundImage': `url(${slideImage.url})` } : { ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}></div>
                         </div>
                     ))}
                 </Slide>

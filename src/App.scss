@@ -29,6 +29,25 @@ html {
   @media only screen and (max-width: $bp-large) {
     font-size: 80%;
   }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 70%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 70%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 60%;
+  }
+}
+
+.container {
+  @media only screen and (max-width: $bp-small) {
+    display: grid;
+    grid-template-rows: 100vh, repeat(5, 1fr);
+  }
 }
 
 // .container {

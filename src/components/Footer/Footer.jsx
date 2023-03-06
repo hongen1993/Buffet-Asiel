@@ -5,9 +5,19 @@ import { Link } from "react-router-dom"
 const Footer = () => {
     const [moveIn, setMoveIn] = useState(false)
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            window.scrollY > 2900 ? setMoveIn(true) : setMoveIn(false)
-        })
+        const height = window.innerHeight;
+        if (height >= 650 && height < 750) {
+            window.addEventListener("scroll", () => {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                    setMoveIn(true)
+                } else {
+                    setMoveIn(false)
+                }
+            })
+        }
+        else {
+            setMoveIn(true)
+        }
     }, [])
     return (
         <>

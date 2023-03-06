@@ -1,7 +1,7 @@
 @import "../../App.scss";
 
-.about-uss-section {
-    height: 165vh;
+.about-us-section {
+    height: 67.5rem;
     background-image: linear-gradient(180deg, rgba($color-secondary, .9)0%,
             rgba($color-secondary, 1)0%,
             rgba($color-secondary, .4)15%,
@@ -13,12 +13,15 @@
     background-size: cover;
     display: grid;
     grid-template-columns: repeat(2, 50vw);
-    grid-template-rows: 85vh 55vh;
+    grid-template-rows: 34.5rem 19rem;
     padding: 10rem 2.5rem 0 2.5rem;
 
-    @media only screen and (max-width: $bp-largest) {
-        height: 145vh;
-        grid-template-rows: 65vh 55vh;
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: repeat(4, min-content);
+        padding: 5rem 0;
+        padding-bottom: 0;
+        grid-row: 2 / 3;
+        height: unset;
     }
 
     &-a,
@@ -41,14 +44,37 @@
         grid-column: 2 / 3;
     }
 
+    &-a,
+    &-b,
+    &-c,
+    &-d {
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 3;
+        }
+    }
+
     &-a {
         width: 85%;
         padding: 4rem 3rem;
-        transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.25);
         transform: translateX(-55rem);
 
         h2 {
             width: 80%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 1 / 2;
+            width: 100%;
+            text-align: center;
+
+            h2 {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 0rem 3rem 4rem 3rem;
         }
     }
 
@@ -57,12 +83,29 @@
         transition: all 1s ease-in-out;
         transform: translateX(55rem);
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 0;
+            grid-row: 2 / 3;
+        }
+
         img {
             border-radius: 5px;
             z-index: 10;
             width: 100%;
             margin-left: -7.5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 110%;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                border-radius: 0px;
+                margin-left: 0rem;
+            }
         }
+
+
     }
 
     &-c {
@@ -70,12 +113,28 @@
         transition: all 1s ease-in-out;
         transform: translateX(-55rem);
 
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 4 / 5;
+            padding: 0;
+        }
+
         img {
             border-radius: 5px;
             z-index: 5;
             width: 105%;
             margin-top: -5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 110%;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                border-radius: 0px;
+                margin-top: 0rem;
+            }
         }
+
     }
 
     &-d {
@@ -83,7 +142,18 @@
         text-align: end;
         padding: .5rem 4rem;
         transform: translateX(55rem);
-        transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.25);
+
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 3 / 4;
+            width: 100%;
+            text-align: center;
+            padding: 5rem 4rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 7rem 4rem;
+        }
     }
 
     h3,

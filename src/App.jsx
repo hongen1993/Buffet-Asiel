@@ -9,7 +9,7 @@ import GallerySection from './sections/GallerySection/GallerySection';
 import ContactUsSection from './sections/ContactUsSection/ContactUsSection';
 import Footer from "./components/Footer/Footer";
 import Modal from "./components/Modal/Modal";
-import AboutUssSection from "./sections/AboutUssSection/AboutUssSection";
+import AboutUsSection from "./sections/AboutUsSection/AboutUsSection";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <>
             <Navbar />
             <HeaderSection />
-            <AboutUssSection />
+            <AboutUsSection />
             <GallerySection />
             <ContactUsSection />
             <Footer />
