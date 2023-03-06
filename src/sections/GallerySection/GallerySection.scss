@@ -131,7 +131,6 @@
     box-shadow: 0 1rem 3rem black;
     border-radius: 1rem;
     overflow: hidden;
-    border: 1.5rem solid rgba($color-primary, .3);
     transition: all 1.3s;
     transform: translateX(55rem);
 
@@ -149,6 +148,8 @@
 
 .react-slideshow-container {
     width: 44vw;
+    border: 1.5rem solid rgba($color-primary, .3);
+    border-radius: 1rem;
 
     @media only screen and (max-width: $bp-largest) {
         width: 47.5vw;
@@ -157,6 +158,8 @@
     @media only screen and (max-width: $bp-small) {
         width: 100%;
     }
+
+    @media only screen and (max-width: $bp-smallest) {}
 
     .nav:first-child,
     .nav:last-child {
