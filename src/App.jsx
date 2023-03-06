@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import './App.scss';
-
+import './assets/GTEAPAC.ttf'
 import Navbar from './components/Navbar/Navbar';
 
 import HeaderSection from './sections/HeaderSection/HeaderSection';

@@ -1,4 +1,9 @@
-@import url('https://importdb.onlinewebfonts.com/c/23e76ac1c34fcf5eb8905e476eefc2aa?family=GTEAPAC');
+@font-face {
+  font-family: "GTEAPAC";
+  src: local("GTEAPAC"),
+    url("./assets/GTEAPAC.ttf") format("truetype");
+  font-weight: bold;
+}
 
 // COLOR VARIABLES
 $color-black: black;
