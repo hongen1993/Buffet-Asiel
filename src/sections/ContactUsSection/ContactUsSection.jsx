@@ -23,7 +23,7 @@ const ContactUsSection = () => {
                         </div>
                         <h3>Horarios</h3>
                         <p>Almuerzo: 13:00 - 16:30</p>
-                        <p>Cena: 20:00 - 23:30</p>
+                        <p>Cena: 20:00 - 24:00</p>
                         <button className="contact-us-section__button">
                             <a href='#popup'>Nuestros precios</a>
                         </button>
